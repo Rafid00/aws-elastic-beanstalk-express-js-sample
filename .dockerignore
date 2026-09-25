@@ -1,0 +1,5 @@
+node_modules
+.git
+tests
+npm-audit.json
+docker-image-info.txt
