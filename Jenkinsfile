@@ -87,11 +87,11 @@ pipeline {
                         set +x
                         printf '%s' "$DOCKER_TOKEN" | docker login --username "$DOCKER_USER" --password-stdin
 
-                        docker tag "isec6000-node-app:${BUILD_NUMBER}" "$DOCKER_USER/isec6000-node-app:${BUILD_NUMBER}"
-                        docker tag "isec6000-node-app:latest" "$DOCKER_USER/isec6000-node-app:latest"
+                        docker tag "isec6000-node-app:${BUILD_NUMBER}" "$DOCKER_USER/isec6000-assignment-2-node-app:${BUILD_NUMBER}"
+                        docker tag "isec6000-node-app:latest" "$DOCKER_USER/isec6000-assignment-2-node-app:latest"
 
-                        docker push "$DOCKER_USER/isec6000-node-app:${BUILD_NUMBER}"
-                        docker push "$DOCKER_USER/isec6000-node-app:latest"
+                        docker push "$DOCKER_USER/isec6000-assignment-2-node-app:${BUILD_NUMBER}"
+                        docker push "$DOCKER_USER/isec6000-assignment-2-node-app:latest"
 
                         docker logout
                     '''
